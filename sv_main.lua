@@ -24,10 +24,10 @@ RegisterNetEvent("nc-headbag:getClosestPlayer2", function(closestPlayer)
 end)
 
 
-VORPInv.RegisterUsableItem("HeadBag", function(data) --change name to item
+VORPInv.RegisterUsableItem(Config.Item, function(data) --change name to item
     getPlayer = closestPlayer
     local _source = source
-    VORPInv.subItem(data.source, "HeadBag", 1) --change name to item
+    VORPInv.subItem(data.source, Config.Item, 1) --change name to item
         TriggerClientEvent("CheckThread", data.source)
         headMask = true
 end)
@@ -35,6 +35,6 @@ end)
 
 RegisterNetEvent("nc-headbag:givebagback", function()
     local _source = source
-    VORPInv.addItem(_source, "HeadBag", 1) --change name to item
+    VORPInv.addItem(_source, Config.Item, 1) --change name to item
 
 end)
