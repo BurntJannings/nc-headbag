@@ -16,20 +16,6 @@ RegisterNetEvent('RemoveHeadBag', function(player)
     headMask = false
 end)
 
-
-RegisterCommand("buckettest", function()
-    local _source = source
-    local fadein = IsScreenFadedIn()
-    local fadeout = IsScreenFadedOut()
-    if fadein then 
-        DoScreenFadeOut(2000)
-    else
-        DoScreenFadein(2000)
-    end
-
-    end)
-
-
 RegisterCommand("takebucket", function()
     local _source = source
     if headMask then 
@@ -52,12 +38,16 @@ RegisterNetEvent("StartThread", function(player)
 while headMask do
     Wait(10)
     if IsEntityDead(ped) then
+     if not Config.RemoveonDeath then
+        OnRespawn()
+     else
         DeleteEntity(Object)
         SendNUIMessage({
             ["action"] = "remove"
         })
         break
     end
+   end
 end 
 
 end)
@@ -114,4 +104,16 @@ function GetClosestPlayer()
         end
     end
     return closestPlayer, closestDistance,  playerid, tgt1
+end
+
+function OnRespawn()
+RegisterNetEvent("vorp:PlayerForceRespawn", function()
+    print("THIS IS HAPPENING")
+    DeleteEntity(Object)
+    SetEntityAsNoLongerNeeded(Object)
+    SendNUIMessage({
+        ["action"] = "remove"
+    })
+    headMask = false
+end)
 end
