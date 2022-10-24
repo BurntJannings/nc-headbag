@@ -16,7 +16,7 @@ RegisterNetEvent('RemoveHeadBag', function(player)
     headMask = false
 end)
 
-RegisterCommand("takebucket", function()
+RegisterCommand(Config.command, function()
     local _source = source
     if headMask then 
         TriggerServerEvent("nc-headbag:givebagback", _source)
