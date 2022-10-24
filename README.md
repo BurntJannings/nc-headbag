@@ -1,15 +1,9 @@
-## Video & Screenshot
+##Screenshot
 
-- click - https://streamable.com/bvcerd
-
-![nc-headbag](https://i.ibb.co/ZcnTVKy/image.png)
+![nc-headbag](https://i.gyazo.com/f6db9c7a7e9a2f54af800a81023c36cb.png)
 
 # nc-headbag
-
-- Important to know - you can only use with the headbag when the hands of the person in front of you are raised.
 - The HeadBag is ready for use, everything works at %100.
-- If you run into a problem, you are always welcome to open ticket in discord - https://discord.gg/cKt4Mpd2PQ
-
 # Installation
 
 - Download the scripts and put them in the ```[resource] or [standalone]``` folder.
@@ -19,14 +13,13 @@
 ensure nc-headbag
 ```
 
-# Add the item to your core
+# Add the item into your DB
 
-In ```shared.lua``` enter the following Item.
-
-```lua 
-["head_bag"] 					 = {["name"] = "head_bag", 			 	["label"] = "Head Bag", 						["weight"] = 5, 		["type"] = "item", 		["image"] = "head_bag.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Put mask on hostage."},
 ```
 
 # Inventory image
 
 - Add the head_bag.png to your inventory -> html -> images
+
+
+All credit goes to the original author, I converted from FiveM to RedM, QBCore/VRP to VORP, and will now maintain
