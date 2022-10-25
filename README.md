@@ -23,3 +23,6 @@ ensure nc-headbag
 
 
 All credit goes to the original author, I converted from FiveM to RedM, QBCore/VRP to VORP, and will now maintain
+
+Original Author is NaorNC, apologies for not remembering the name sooner!
+
