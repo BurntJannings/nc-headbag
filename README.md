@@ -1,3 +1,8 @@
+
+All credit goes to the original author, I converted from FiveM to RedM, QBCore/VRP to VORP, and will now maintain
+
+Original Author is NaorNC, apologies for not remembering the name sooner!
+
 ##Screenshot
 
 ![nc-headbag](https://i.gyazo.com/f6db9c7a7e9a2f54af800a81023c36cb.png)
