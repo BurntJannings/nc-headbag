@@ -16,14 +16,7 @@ RegisterNetEvent('RemoveHeadBag', function(player)
     headMask = false
 end)
 
-RegisterCommand(Config.command, function()
-    local _source = source
-    if headMask then 
-        TriggerServerEvent("nc-headbag:givebagback", _source)
-        TriggerEvent("CheckThread")
-    else
-    end
-    end)
+
 
 RegisterNetEvent("StartThread", function(player)
      ped = PlayerPedId()
@@ -117,3 +110,13 @@ RegisterNetEvent("vorp:PlayerForceRespawn", function()
     headMask = false
 end)
 end
+
+
+
+RegisterCommand(Config.bucketcommand, function() -- on duty command
+    local _source = source
+    if headMask then 
+    TriggerServerEvent("nc-headbag:givebagback", _source)
+     TriggerEvent("CheckThread")
+    end
+end)
